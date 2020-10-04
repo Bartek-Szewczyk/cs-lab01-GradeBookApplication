@@ -5,6 +5,7 @@ using GradeBook.Enums;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -127,6 +128,9 @@ namespace GradeBook.GradeBooks
 
         public virtual void CalculateStatistics()
         {
+
+        
+
             var allStudentsPoints = 0d;
             var campusPoints = 0d;
             var statePoints = 0d;
@@ -191,6 +195,8 @@ namespace GradeBook.GradeBooks
             if (dualEnrolledPoints != 0)
                 Console.WriteLine("Average for only dual enrolled students is " + (dualEnrolledPoints / Students.Where(e => e.Type == StudentType.DualEnrolled).Count()));
         }
+
+        
 
         public virtual void CalculateStudentStatistics(string name)
         {

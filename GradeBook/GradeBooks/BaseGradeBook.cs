@@ -3,6 +3,7 @@ using System.Linq;
 
 using GradeBook.Enums;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -13,6 +14,8 @@ namespace GradeBook.GradeBooks
     {
         public string Name { get; set; }
         public List<Student> Students { get; set; }
+        public GradeBookType Type { get; set; }
+        public bool IsWeighted { get; set; }  // Add IsWeighted property to BaseGradeBook   
 
         public BaseGradeBook(string name)
         {
